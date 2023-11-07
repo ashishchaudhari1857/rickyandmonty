@@ -1,0 +1,53 @@
+
+
+
+/* Add this CSS to your component's stylesheet or a separate CSS file */
+.episode_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.episode_card {
+    background: linear-gradient(135deg, #0052D4, #4364F7, #6FB1FC);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 22rem;
+  }
+  
+  .episode_card h2 {
+    font-size: 24px;
+    margin: 0;
+    padding-bottom: 8px;
+  }
+  
+  .episode_card p {
+    font-size: 16px;
+    margin: 0;
+    padding-bottom: 8px;
+  }
+  
+  .characters {
+    margin-top: 16px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 8px 0;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Add any other additional styling as needed */
+  
