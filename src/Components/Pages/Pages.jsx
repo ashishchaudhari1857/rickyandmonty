@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 
 function Pages({check}) {
   const page = useSelector((state) => state.data.pageNumber);
-  console.log("p", page);
   const TotalPages = useSelector((state) => state.data.filterdata.Totalpage);
   const dispatch = useDispatch();
   // const { data} = useFetch(`character?page=${page}`);
@@ -38,7 +37,8 @@ function Pages({check}) {
 
   let filterdata = useSelector((state) => state.data.filterdata.filterdata);
 
-  if (check) {
+  if (check 
+    && filterdata.length!==0) {
     const startIndex = (page - 1) * TotalPages;
     const endIndex = startIndex + 20;
     filterdata = filterdata?.slice(startIndex, endIndex);
@@ -57,7 +57,7 @@ function Pages({check}) {
         </Link>
       ))
     ) : (
-      <h1 style={{ color: "white" }}>No data Found</h1>
+      <h1 style={{  color:check?"black":"white" }}>No data Found</h1>
     );
 
   return (
