@@ -6,7 +6,6 @@ function useFetch(url, fullUrl) {
   const [loading, setLoading] = useState(false);
 
   const URL = url.length !== 0 ? `https://rickandmortyapi.com/api/${url}` : fullUrl;
-  console.log(URL)
 
   const fetchCharacters = useCallback(async () => {
     setLoading(true);
@@ -17,19 +16,24 @@ function useFetch(url, fullUrl) {
           "Content-Type": "application/json",
         },
       });
-
+  
       if (!res.ok) {
         throw new Error(`Request failed with status: ${res.status}`);
       }
-
+  
       const fetchedData = await res.json();
+  
+      // You should see fetched data in the console to verify it contains the expected data.
+  
       setData(fetchedData);
       setLoading(false);
+      setError(null);
     } catch (err) {
       console.log(err);
       setError(err);
     }
   }, [URL]);
+  
 
   useEffect(() => {
     fetchCharacters();

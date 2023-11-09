@@ -1,0 +1,69 @@
+.episode_filter {
+    background-color: rgb(68, 67, 67);
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4em;
+  }
+  
+  .episode_filter select {
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    width: 7em;
+    padding: 0.3rem;
+    font-size: 1.1rem;
+    background-color: rgb(245, 245, 245);
+  }
+  
+  .episode_filter h2 {
+    color: rgb(65, 189, 102);
+  }
+  
+
+  /* Media Query for Tablet and Below */
+
+  /* Media Query for Tablet and Below */
+  @media screen and (max-width: 950px) {
+    .episode_filter {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      padding: 1em;
+      margin-top: 120px;
+    }
+}
+
+
+  @media screen and (max-width: 768px) {
+    .episode_filter {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      padding: 1em;
+      margin-top: 3%;
+    }
+  
+    .episode_filter select {
+      width: 90%;
+      margin-top: 1rem;
+    }
+
+    
+   /* .episode_filter option{ */
+    /* greeen */
+   /* } */
+  }
+  
+
+    /* Media Query for Tablet and Below */
+    @media screen and (max-width: 768px) {
+        .episode_filter {
+          flex-direction: column;
+          align-items: flex-start;
+          height: auto;
+          padding: 1em;
+          margin-top: 3%;
+        }
+    }

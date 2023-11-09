@@ -10,12 +10,12 @@ function Profile() {
   const params = useParams();
   const dispatch =useDispatch();
   const { data, loading, error } = useFetch(`character/${params.id}`);
+   
   const obj=data.location;
 
-  console.log("p" ,data)
 
   const locationdATA= useFetch("" , obj?.url)
-  console.log(locationdATA?.data)
+  console.log( locationdATA?.data)
 
   if (loading) {
     return <div>Loading...</div>;
@@ -58,7 +58,7 @@ function Profile() {
           <span>Origin:</span> {data.origin.name}
         </p>
         <p>
-          <span>Type:</span> {locationdATA?.data?.type}
+          <span>Type(location):</span> {locationdATA?.data?.type}
         </p>
         <p>
           <span>Dimension:</span> {locationdATA?.data?.dimension}

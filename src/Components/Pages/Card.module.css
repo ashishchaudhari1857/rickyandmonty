@@ -1,0 +1,37 @@
+.card_container{
+    background: linear-gradient( rgb(75, 21, 21), rgb(238, 79, 79)  ,rgb(98, 87, 87) ,black);
+    width: 17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 2px 2px whitesmoke; 
+    border-radius: 0.3rem;
+    height: 31rem;
+    text-decoration: none;
+
+}
+.card_container img{
+     width: 15rem;
+     height: 15rem;
+     border-radius: 0.2rem;
+}
+
+li{
+    list-style: none;
+}
+ .info h2{
+    color: black;
+ }
+.info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(199, 207, 211);
+
+}
+
+.info li{
+    margin-top: 0.6rem;
+}
+
