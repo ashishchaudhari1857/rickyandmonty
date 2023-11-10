@@ -28,7 +28,7 @@
   color: black;
 }
 
-@media screen and (max-width: 950px) {
+@media  (max-width: 950px) {
   .nav_list {
     display: flex;
     flex-direction: column;

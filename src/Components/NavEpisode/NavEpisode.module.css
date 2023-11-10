@@ -38,7 +38,7 @@
   color: green;
 }
 /* Media Query for Tablet and Below */
-@media screen and (max-width: 950px) {
+@media(max-width: 950px) {
   .episode_filter {
     flex-direction: column;
     align-items: flex-start;
@@ -57,7 +57,7 @@
 }
  
 
-@media screen and (max-width: 768px) {
+@media(max-width: 768px) {
   .episode_filter {
     flex-direction: column;
     align-items: flex-start;
@@ -76,11 +76,11 @@
   text-align: center;
   margin-top: 4em;
 
-  @media screen and (max-width: 950px) {
+  @media  (max-width: 950px) {
     margin-top: 8em;
   }
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     margin-top: 9em;
   }
 }
