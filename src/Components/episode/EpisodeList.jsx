@@ -38,14 +38,14 @@ function EpisodeList() {
   console.log( "",episodeData)
 
   return (
-    <div className={classes.episode_container}> 
+    <div className={classes.episode_container}  > 
      {episodeData.map((episode, index) => (
-  <div key={index} className={classes.episode_card}>
+  <div key={index} className={classes.episode_card} onClick={(e)=>navigate(`/episode/${episode.id}`)} >
     <h2>{episode.name}</h2>
     <p>Air Date: {episode.air_date}</p>
     <p>Episode: {episode.episode}</p>
     <div className="characters">
-    <p onClick={(e)=>navigate(`/episode/${episode.id}`)}>  Show More Characters of  this  episode:</p>
+    <p onClick={(e)=>navigate(`/episode/${episode.id}`)} style={{color:"black"}}>  Click Here to see more Characters of  this  episode:</p>
       {loading ? (
         <p >Loading...</p>
       ) : error ? (

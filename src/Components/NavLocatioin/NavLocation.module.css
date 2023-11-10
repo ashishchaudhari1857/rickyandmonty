@@ -1,69 +1,82 @@
-.location_filter {
-    background-color: rgb(68, 67, 67);
-    width: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 4em;
-  }
-  
-  .location_filter select {
-    height: 2.5rem;
-    border-radius: 0.3rem;
-    width: 8.5em;
-    padding: 0.3rem;
-    font-size: 1.1rem;
-    background-color: rgb(245, 245, 245);
-  }
-  
-  .location_filter h2 {
-    color: rgb(65, 189, 102);
-  }
-  
-
-  /* Media Query for Tablet and Below */
-
-  /* Media Query for Tablet and Below */
-  @media screen and (max-width: 950px) {
-    .location_filter {
-      flex-direction: column;
-      align-items: flex-start;
-      height: auto;
-      padding: 1em;
-      margin-top: 120px;
-    }
+.locationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.locationFilter {
+  background-color: rgb(97, 90, 90);
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 2.8em;
+}
+
+.locationFilter select {
+  height: 2rem;
+  border-radius: 0.3rem;
+  width: 8.5em;
+  padding: 0.3rem;
+  font-size: 1.1rem;
+  background-color: rgb(245, 245, 245);
+}
+
+.locationFilter h2 {
+  color: rgb(65, 189, 102);
+}
+
+.locationDetails {
+  text-align: center;
+  margin-top: 4em; /* Adjust as needed */
+}
+.locationDetails h1 span{
+  font-size: 2rem;
+  color: green;
+} 
+/* Media Query for Tablet and Below */
+@media screen and (max-width: 950px) {
+  .locationFilter {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 1em;
+    top: 16%;
+  }
+  .locationFilter select{
+    justify-content: center;
+    margin: auto;
+  }
+  .locationFilter h2 {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .locationFilter {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 1em;
+    margin-top: 1.7%;
+  }
+
+  .locationFilter select {
+    width: 90%;
+    margin-top: 1rem;
+  }
+ 
+}
+.locationDetails {
+  text-align: center;
+  margin-top: 4em; /* Adjust as needed for larger screens */
+
+  @media screen and (max-width: 950px) {
+    margin-top: 8em; /* Adjust for medium-sized screens */
+  }
 
   @media screen and (max-width: 768px) {
-    .location_filter {
-      flex-direction: column;
-      align-items: flex-start;
-      height: auto;
-      padding: 1em;
-      margin-top: 3%;
-    }
-  
-    .location_filter select {
-      width: 90%;
-      margin-top: 1rem;
-    }
-
-    
-   /* .location_filter option{ */
-    /* greeen */
-   /* } */
+    margin-top:9em; /* Adjust for smaller screens */
   }
-  
-
-    /* Media Query for Tablet and Below */
-    @media screen and (max-width: 768px) {
-        .location_filter {
-          flex-direction: column;
-          align-items: flex-start;
-          height: auto;
-          padding: 1em;
-          margin-top: 3%;
-        }
-    }
+}

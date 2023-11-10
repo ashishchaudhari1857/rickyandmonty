@@ -14,7 +14,11 @@ function NavEpisode() {
   const [error, setError] = useState(null);
   const [selectedEpisode, setEpisode] = useState(params?.id ? params?.id : 1);
   console.log(selectedEpisode);
-
+  const formattedDate = (dateString) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const date = new Date(dateString);
+    return date.toLocaleDateString(undefined, options);
+  };
   const episodeIds = Array.from({ length: 51 }, (_, i) => i + 1);
   const episodeApi = `https://rickandmortyapi.com/api/episode/${selectedEpisode}`;
   const { data: episode } = useFetch('', episodeApi);
@@ -49,7 +53,8 @@ function NavEpisode() {
   console.log();
   dispatch(dataAction.storeFilterdata(error? {result:[] ,Totalpage:1}:{result:characterData,Totalpage:Math.ceil(characterData?.length /20)}));
   return (
-    <div>
+    <>
+    <div className={classes.episodecontainer}>
         <div className={classes.episode_filter}>
             <h2>Search  Character By Episode</h2>
         <select onChange={(e) => setEpisode(e.target.value)}>
@@ -59,11 +64,15 @@ function NavEpisode() {
           </option>
         ))}
          </select>
+      
+      </div>
+      <div className={classes.episodeDetails}>
+          <h1> Location:- <span>{episode.name}</span></h1>
+          <h2>Air Date: {formattedDate(episode.created)}</h2>
         </div>
-     
-
+      </div>
 <Pages  check="episode"></Pages>
-    </div>
+    </>
   );
 }
 
