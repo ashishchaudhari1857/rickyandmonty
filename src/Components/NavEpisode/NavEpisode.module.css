@@ -56,22 +56,6 @@
   }
 }
  
-
-@media(max-width: 768px) {
-  .episode_filter {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-    padding: 1em;
-    margin-top: 1.7%;
-  }
-
-  .episode_filter select {
-    width: 90%;
-    margin-top: 1rem;
-  }
-}
-
 .episodeDetails {
   text-align: center;
   margin-top: 4em;
@@ -82,3 +66,19 @@
 
   
 }
+
+
+@media(max-width: 768px) {
+  .episode_filter {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    margin-top: 1%;
+  }
+
+  .episode_filter select {
+    width: 90%;
+    margin-top: 1rem;
+  }
+}
+
