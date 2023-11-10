@@ -76,7 +76,5 @@
     margin-top: 8em; /* Adjust for medium-sized screens */
   }
 
-  @media (max-width: 768px) {
-    margin-top:9em; /* Adjust for smaller screens */
-  }
+
 }

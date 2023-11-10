@@ -80,7 +80,5 @@
     margin-top: 8em;
   }
 
-  @media (max-width: 768px) {
-    margin-top: 9em;
-  }
+  
 }
